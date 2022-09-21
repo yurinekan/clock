@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+html,body{
+  width:100vw;
+  height:100vh;
+  margin:0;
+  padding:0;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#04040f;
+  color:#eeeeee;
+  font-family:'Poppins',sans-serif;
+}
+
+.glow{
+  user-select:none;
+  font-size:10vw;
+  font-weight:600;
+  animation:glow 1s ease-in-out infinite alternate;
+  -moz-animation:glow 1s ease-in-out infinite alternate;
+  -webkit-animation:glow 1s ease-in-out infinite alternate;
+  text-shadow: 0 0 5px #fff, 0 0 40px #fbff1c;
+}
