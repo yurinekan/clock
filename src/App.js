@@ -1,21 +1,41 @@
 import './App.scss';
 
+const weekdays = ['Dom.', 'Seg.', 'Ter.', 'Qua.', 'Qui.', 'Sex.'];
+const months = [
+  'Janeiro',
+  'Fevereiro',
+  'Março',
+  'Abril',
+  'Maio',
+  'Junho',
+  'Julho',
+  'Agosto',
+  'Setembro',
+  'Outubro',
+  'Novembro',
+  'Dezembro'];
+
 function App() {
 
   function loop() {
     setInterval(displayTime, 1000)
   }
   loop()
-  
+
   function displayTime() {
     const timeNow = new Date();
 
-    let day = timeNow.toLocaleString('default', { weekday: 'short' });
+    // Outra forma de fazer, mas não funciona no Safari:
+    // let day = timeNow.toLocaleString('default', { weekday: 'short' });
     // let month = timeNow.toLocaleString('default', { month: 'long' });
     // let dayInNumber = timeNow.toLocaleString('default', { day: 'numeric' });
-    
-    let dateStr = day
-    //  + ', ' + dayInNumber + ' de ' + month;
+    // day + ', ' + dayInNumber + ' de ' + month;
+
+    let day = weekdays[timeNow.getDay()];
+    let dayInNumber = timeNow.getDate();
+    let month = months[timeNow.getMonth()];
+    let dateStr = (day + ', ' + dayInNumber + ' de ' + month).toLowerCase();
+
     document.getElementById('date').innerText = dateStr;
 
     let hours = timeNow.getHours();
