@@ -11,10 +11,11 @@ function App() {
     const timeNow = new Date();
 
     let day = timeNow.toLocaleString('default', { weekday: 'short' });
-    let month = timeNow.toLocaleString('default', { month: 'long' });
-    let dayInNumber = timeNow.toLocaleString('default', { day: 'numeric' });
+    // let month = timeNow.toLocaleString('default', { month: 'long' });
+    // let dayInNumber = timeNow.toLocaleString('default', { day: 'numeric' });
     
-    let dateStr = (day + ', ' + dayInNumber + ' de ' + month);
+    let dateStr = day
+    //  + ', ' + dayInNumber + ' de ' + month;
     document.getElementById('date').innerText = dateStr;
 
     let hours = timeNow.getHours();
