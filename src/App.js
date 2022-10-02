@@ -1,6 +1,6 @@
 import './App.scss';
 
-const weekdays = ['Dom.', 'Seg.', 'Ter.', 'Qua.', 'Qui.', 'Sex.'];
+const weekdays = ['Dom.', 'Seg.', 'Ter.', 'Qua.', 'Qui.', 'Sex.', 'Sáb.'];
 const months = [
   'Janeiro',
   'Fevereiro',
