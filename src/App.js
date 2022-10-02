@@ -16,20 +16,41 @@ const months = [
   'Dezembro'];
 
 function App() {
+  let count = 0;
 
   function loop() {
-    setInterval(displayTime, 1000)
+    setInterval(displayTime, 1000);
+    setInterval(changeBackgroundImage, 14400000);
   }
   loop()
 
+  function changeBackgroundImage() {
+    let imageBackground = document.getElementsByTagName('img')[0];
+    animateFadeElement(imageBackground);
+
+    imageBackground.src = `https://picsum.photos/1920/1080?random=${count++}`;
+  }
+
+  function animateFadeElement(element) {
+    const fade = [
+      { filter: 'brightness(1)' },
+      { filter: 'brightness(0)' },
+      { filter: 'brightness(0)' },
+      { filter: 'brightness(1)' }
+
+    ];
+
+    const fadeTiming = {
+      duration: 2000,
+      iterations: 1,
+      easing: 'ease-out'
+    }
+
+    element.animate(fade, fadeTiming)
+  }
+  
   function displayTime() {
     const timeNow = new Date();
-
-    // Outra forma de fazer, mas não funciona no Safari:
-    // let day = timeNow.toLocaleString('default', { weekday: 'short' });
-    // let month = timeNow.toLocaleString('default', { month: 'long' });
-    // let dayInNumber = timeNow.toLocaleString('default', { day: 'numeric' });
-    // day + ', ' + dayInNumber + ' de ' + month;
 
     let day = weekdays[timeNow.getDay()];
     let dayInNumber = timeNow.getDate();
