@@ -1,7 +1,7 @@
 # Clock
 Displays random images in the background
 
-![image](https://github.com/yurinekan/clock/assets/49167845/c1dee48b-c67f-4092-a374-f2e1ebf5dfcb)
+![image](https://cdn.discordapp.com/attachments/925190693423558707/1169444833576886334/image.png?ex=65556d5f&is=6542f85f&hm=a47c586f7b97309429adafffc32c463ca80404bf1e1a43da5dfdb8531539259f&)
 
 
 ## Available Scripts
